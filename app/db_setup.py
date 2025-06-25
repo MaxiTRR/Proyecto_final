@@ -4,9 +4,9 @@ from mysql.connector import Error
 def db_connection():
     try:
         conn = mysql.connector.connect(
-            host='localhost',
-            user='root',  
-            password='', 
+           host='mysql_db',  # Nombre del servicio MySQL en Docker Compose
+            user='user',      # Usuario de MySQL para Docker
+            password='password', # Contraseña de MySQL para Docker
             database='task_seminario_db' # Se conecta directamente a la DB
         )
         if conn.is_connected():
@@ -16,23 +16,26 @@ def db_connection():
         return None
 
 def create_database():
+    print("\n--- Iniciando configuración inicial de la base de datos y tabla ---")
     conn = None 
     cursor = None   
 
     try:
         #Al usar los contenedeores en Docker es posible que se deban cambiar estas credenciales
         conn = mysql.connector.connect(
-            host='localhost',          
-            user='root',               
-            password=''                
+            host='mysql_db',          #IMPORTANTE, si queremos ejecutar esto en la compu local cmabiarlo 'localhost'   
+            user='root',              #Usar el usuario root
+            password='root_password'  #Usar la contraseña del usuario root definida en docker-compose.yml             
         )
 
         if conn.is_connected():
+            print("Conexión al servidor MySQL establecida. Creando cursor.")
             cursor = conn.cursor()
 
             #Crear la base de datos si no existe
             db_name = "task_seminario_db"
             try:
+                print(f"Ejecutando CREATE DATABASE IF NOT EXISTS {db_name}...")
                 cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
                 print(f"Base de datos '{db_name}' creada o ya existente.")
             except Error as err:

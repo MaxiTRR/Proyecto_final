@@ -3,7 +3,7 @@ import json
 from redis import RedisError
 
 #Configuración de Redis
-REDIS_HOST = 'localhost'
+REDIS_HOST = 'redis_cache' #Si lo ejecutamos en local, esta variable deberia ser 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 0 # Base de datos por defecto de Redis
 

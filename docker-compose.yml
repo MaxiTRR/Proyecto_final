@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # Servicio de Base de Datos MySQL
+  mysql_db:
+    build: ./mysql_db # <--- Construye desde la carpeta mysql_db
+    container_name: task_mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: task_seminario_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks: # Asigna el servicio a la red personalizada
+      - task_app_network
+    healthcheck: # Healthcheck para MySQL
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_password"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # Servicio de Caché Redis
+  redis_cache:
+    build: ./redis # <--- Construye desde la carpeta redis
+    container_name: task_redis_cache
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks: # Asigna el servicio a la red personalizada
+      - task_app_network
+
+  # Servicio de Aplicación Python
+  python_app:
+    build: ./app # <--- Construye desde la carpeta app
+    container_name: task_python_app
+    restart: on-failure
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+      redis_cache:
+        condition: service_started
+    environment:
+      PYTHONUNBUFFERED: 1
+    tty: true
+    stdin_open: true
+    networks: # Asigna el servicio a la red personalizada
+      - task_app_network
+
+# Volúmenes para persistencia de datos
+volumes:
+  mysql_data:
+  redis_data:
+
+# Redes personalizadas
+networks:
+  task_app_network:
+    driver: bridge # Tipo de red (por defecto para redes personalizadas)
