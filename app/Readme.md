@@ -1,6 +1,6 @@
 # Mi Proyecto: Lite Task App
 
-##Version: 1.0
+Version: 1.0
 
 ## Descripción
 Una aplicación web para gestionar tareas de manera simplificada (solo permite añadir tareas, consultar y traer todas las tareas y actualizar su estado segun se hayan realizado). La app usa un sistema de base de datos MySQL para registar y consultar tareas, asi como tambien un sistema de cache Redis por si es necesario volver a consultar informacion previamente cosultada, evitando volver a llamar a la base de datos y asi mejorar el rendimiento.
@@ -30,7 +30,7 @@ Los servicios se comunican a través de una red bridge.
    ```
    docker-compose up --build -d
    ```
-4. Accede a la consola para ejecutar el menu de la app: 
+4. Accede a la consola para ejecutar el menu de la app (es necesario apretar 'enter' para que aparezca el menu): 
    ```
    docker attach task_python_app
    ```
@@ -46,4 +46,10 @@ Los servicios se comunican a través de una red bridge.
     ```
     docker-compose down -v
     ```
+
+## Ejemplo de Uso
+# Añadir tarea
+
+![agregar](https://github.com/user-attachments/assets/b706e3a5-3d61-4a0e-8d09-cf03b8121b3a)
+
 
