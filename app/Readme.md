@@ -4,6 +4,7 @@ Version: 1.0
 
 ## Descripción
 Una aplicación web para gestionar tareas de manera simplificada (solo permite añadir tareas, consultar y traer todas las tareas y actualizar su estado segun se hayan realizado). La app usa un sistema de base de datos MySQL para registar y consultar tareas, asi como tambien un sistema de cache Redis por si es necesario volver a consultar informacion previamente cosultada, evitando volver a llamar a la base de datos y asi mejorar el rendimiento.
+<br>
 La app puede ejecutarse tanto de manera local o levantando los servicios en contenedores de Docker (cambiando las variables de creacion de la base de datos y el servidor Redis en los scripts por los parametros correspondientes)
 
 ## Arquitectura
@@ -15,7 +16,7 @@ Los servicios se comunican a través de una red bridge.
 ## Requisitos
 - Docker
 - Docker Compose
-- Xampp (Si se quisiera ejecutar la app en localhost, cambiando los parametros de creacion y conexion a la base de datos por los correspondientes)
+- Xampp (Si se quisiera ejecutar la app en localhost, cambiando los parametros de creacion y conexion a la base de datos por los correspondientes. La base de datos se crea desde el mismo script de python)
 
 ## Instrucciones
 1. Clona el repositorio:
