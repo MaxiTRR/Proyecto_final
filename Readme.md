@@ -51,9 +51,10 @@ Los servicios se comunican a través de una red bridge.
 
 # Ejemplo de Uso
 ## Habilitar menu en la consola cmd
-![menu attach](https://github.com/user-attachments/assets/2df26c90-7c1b-4fe3-9e52-842a8c8750d0)
+![menu attach](https://github.com/user-attachments/assets/80ebeba2-5d5a-4f08-87bf-c133f7dae283)
+
 ## Añadir tarea
-![agregar](https://github.com/user-attachments/assets/b706e3a5-3d61-4a0e-8d09-cf03b8121b3a)
+![agregar](https://github.com/user-attachments/assets/aba662dc-df2d-49c4-9ef8-8f3bc1e85711)
 
 ## Ver tarea
 ![ver](https://github.com/user-attachments/assets/b7339a98-80a4-429b-9468-582df4f5f03d)
@@ -65,7 +66,7 @@ Los servicios se comunican a través de una red bridge.
 ![salir](https://github.com/user-attachments/assets/b21b8854-4cf8-45c1-a1ee-153ed6b63f33)
 
 ## Levantar python_app
-![levantar python app](https://github.com/user-attachments/assets/6ac9be86-8f3d-453d-a9eb-490b05f026bd)
+![levantar python app](https://github.com/user-attachments/assets/b45a9e80-f04f-4f1b-99ed-f905dbfbb305)
 
 # Notas adicionales
 Esta app presenta una funcionalidad simple con el fin de probar rapidamente la misma levantando cada servicio en contenedores de Docker distintos. La base de datos solo posee tres columnas correspondientes a un id autoincremental, un titulo/descripcion de las tareas y un estado de la misma que puede ser 'Pendiente' o 'Completado' (correspondiendo esto con una eliminacion logica de la base de datos)
