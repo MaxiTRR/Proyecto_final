@@ -50,7 +50,6 @@ Los servicios se comunican a través de una red bridge.
 ## Ejemplo de Uso
 # Habilitar menu en la consola cmd
 ![menu attach](https://github.com/user-attachments/assets/2df26c90-7c1b-4fe3-9e52-842a8c8750d0)
-
 # Añadir tarea
 ![agregar](https://github.com/user-attachments/assets/b706e3a5-3d61-4a0e-8d09-cf03b8121b3a)
 
