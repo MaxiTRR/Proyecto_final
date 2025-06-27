@@ -37,7 +37,7 @@ Los servicios se comunican a través de una red bridge.
    ```
 5. Añadir nueva tarea: ingresar 1 y escribir el titulo/descripcion de la tarea (solo 255 caracteres)
 6. Ver todas las tareas: ingresar 2
-7. Actualizar tarea (estado): ingresar 3 --> ingresar el id de la tarea a actualizar
+7. Actualizar tarea (estado): ingresar 3 --> ingresar el id de la tarea a actualizar --> ingresar 'y' para confirmar, 'n' para volver al menu
 8. Salir y cerrar el programa: ingresar 4
 9. Volver a iniciar la app de python:
     ```
@@ -66,6 +66,19 @@ Los servicios se comunican a través de una red bridge.
 
 ## Levantar python_app
 ![levantar python app](https://github.com/user-attachments/assets/6ac9be86-8f3d-453d-a9eb-490b05f026bd)
+
+# Notas adicionales
+Esta app presenta una funcionalidad simple con el fin de probar rapidamente la misma levantando cada servicio en contenedores de Docker distintos. La base de datos solo posee tres columnas correspondientes a un id autoincremental, un titulo/descripcion de las tareas y un estado de la misma que puede ser 'Pendiente' o 'Completado' (correspondiendo esto con una eliminacion logica de la base de datos)
+<br>
+La app puede ser mejorada agregandole mas funcionalidades:
+<ul>
+   <li>Consultar tareas por ID</li>
+   <li>Consulta de tareas diferenciadas por estado</li>
+   <li>Campo con la fecha de creacion de la tarea</li>
+   <li>Campo con la fecha de finalizacion de la tarea</li>
+   <li>Control y verificacion de los formatos de entrada de los input del formulario</li>
+   <li>Eliminacion fisica de las tareas completadas</li>
+</ul>
 
 
 
