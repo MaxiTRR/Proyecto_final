@@ -48,22 +48,22 @@ Los servicios se comunican a través de una red bridge.
     ```
 
 
-## Ejemplo de Uso
-# Habilitar menu en la consola cmd
+# Ejemplo de Uso
+## Habilitar menu en la consola cmd
 ![menu attach](https://github.com/user-attachments/assets/2df26c90-7c1b-4fe3-9e52-842a8c8750d0)
-# Añadir tarea
+## Añadir tarea
 ![agregar](https://github.com/user-attachments/assets/b706e3a5-3d61-4a0e-8d09-cf03b8121b3a)
 
-# Ver tarea
+## Ver tarea
 ![ver](https://github.com/user-attachments/assets/b7339a98-80a4-429b-9468-582df4f5f03d)
 
-# Actualizar tarea
+## Actualizar tarea
 ![Actualizar](https://github.com/user-attachments/assets/8cae2276-1212-4c9f-838e-a6be6551a68f)
 
-# Salir de la app
+## Salir de la app
 ![salir](https://github.com/user-attachments/assets/b21b8854-4cf8-45c1-a1ee-153ed6b63f33)
 
-# Levantar python_app
+## Levantar python_app
 ![levantar python app](https://github.com/user-attachments/assets/6ac9be86-8f3d-453d-a9eb-490b05f026bd)
 
 
