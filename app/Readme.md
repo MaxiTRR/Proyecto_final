@@ -22,16 +22,28 @@ Los servicios se comunican a través de una red bridge.
    ```
    bash git clone https://github.com/MaxiTRR/Proyecto_final.git
    ```
-Navega al directorio utilizando el cmd de windows: 
+2. Navega al directorio utilizando el cmd de windows: 
    ``` 
    cd mi-proyecto
    ```
-Levanta los contenedores: 
+3. Levanta los contenedores: 
    ```
    docker-compose up --build -d
    ```
-Accede a la consola para ejecutar el menu de la app: 
+4. Accede a la consola para ejecutar el menu de la app: 
    ```
    docker attach task_python_app
    ```
+5. Añadir nueva tarea: ingresar 1 y escribir el titulo/descripcion de la tarea (solo 255 caracteres)
+6. Ver todas las tareas: ingresar 2
+7. Actualizar tarea (estado): ingresar 3 --> ingresar el id de la tarea a actualizar
+8. Salir y cerrar el programa: ingresar 4
+9. Volver a iniciar la app de python:
+    ```
+    docker-compose up -d python_app
+    ```
+10. Detener y eliminar los contenedores y volumenes de Docker (si fuera necesario por cambios en el codigo, luego se deberian repetir los pasos desde el Nro. 3):
+    ```
+    docker-compose down -v
+    ```
 
