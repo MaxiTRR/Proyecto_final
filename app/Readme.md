@@ -19,11 +19,19 @@ Los servicios se comunican a través de una red bridge.
 
 ## Instrucciones
 1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/MaxiTRR/Proyecto_final.git
-Navega al directorio:
-cd mi-proyecto
-Levanta los contenedores:
-docker-compose up --build
-Accede a la API en http://localhost:8080.
+   ```
+   bash git clone https://github.com/MaxiTRR/Proyecto_final.git
+   ```
+Navega al directorio utilizando el cmd de windows: 
+   ``` 
+   cd mi-proyecto
+   ```
+Levanta los contenedores: 
+   ```
+   docker-compose up --build -d
+   ```
+Accede a la consola para ejecutar el menu de la app: 
+   ```
+   docker attach task_python_app
+   ```
 
